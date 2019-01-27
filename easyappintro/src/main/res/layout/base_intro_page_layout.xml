@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_app_intro_page_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Teal50"
+    >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_app_intro_view_pager_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_app_intro_tab_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/dr_dot_selctor_indicator"
+        app:tabMode="fixed"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:layout_above="@id/fragment_app_intro_coordinator_layout_id"
+        />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/fragment_app_intro_coordinator_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <!--Button to go forward-->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fragment_app_intro_next_bt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:drawableLeft="@drawable/ic_go_forward_24dp"
+            style="@style/BorderLessButton"
+            android:drawableStart="@drawable/ic_go_forward_24dp" />
+
+        <!--Button to go back-->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fragment_app_intro_previous_bt_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BorderLessButton"
+            android:drawableRight="@drawable/ic_back_arrow_24dp"
+            android:drawableEnd="@drawable/ic_back_arrow_24dp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            style="@style/BorderLessButton"
+            />
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
